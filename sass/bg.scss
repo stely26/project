@@ -1,0 +1,97 @@
+.glid {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../../images/glid.png) repeat;
+  background-position: center;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+.slash {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url(../../images/slash.png) repeat;
+  background-position: center;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+// use of keyframes mixin
+@keyframes animate {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 75.5555vh);
+  }
+}
+
+@keyframes animate-v {
+  0%,
+  100% {
+    transform: translate(80vw, 0);
+  }
+  50% {
+    transform: translate(0, 0);
+  }
+}
+
+.raster {
+  position: fixed;
+  pointer-events: none;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  transform: translateZ(0);
+  z-index: 1;
+  .rasterline {
+    background-color: red;
+    opacity: 0.4;
+  }
+  .r-h1,
+  .r-h2 {
+    position: absolute;
+    transform-origin: left;
+    height: 1px;
+  }
+
+  .r-h1 {
+    top: 33.3333vh;
+    width: 100%;
+  }
+
+  .r-h2 {
+    position: absolute;
+    //top: 75.5555vh;
+    width: 100vw;
+    animation: animate 15s infinite linear;
+  }
+
+  .r-v1,
+  .r-v2 {
+    position: absolute;
+    -webkit-transform-origin: top;
+    transform-origin: top;
+    height: 100vh;
+    width: 1px;
+  }
+
+  .r-v1 {
+    //left: 11.1111vw;
+    animation: animate-v 15s infinite linear;
+  }
+
+  .r-v2 {
+    left: 50vw;
+  }
+}

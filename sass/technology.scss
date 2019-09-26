@@ -1,0 +1,127 @@
+@import "mixin.scss";
+
+.project {
+  position: fixed;
+  display: inline-block;
+  top: 15rem;
+  right: 0;
+  transform: rotate(90deg) translate(7.5rem, -0.375rem);
+  z-index: 999;
+  font-family: "NeueMontreal";
+  letter-spacing: 0.1rem;
+  a {
+    text-decoration: none;
+    color: #abe1fa;
+    font-size: 1.875rem;
+    font-weight: 600;
+    &:hover {
+        color: #fff;
+    }
+  }
+}
+
+.container {
+  position: absolute;
+  width: 1130px;
+  //height: 5000px;
+  //border: 1px solid yellow;
+  color: #fff;
+  margin: 0 auto;
+  top: 10%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  @include pc-m {
+    width: 100%;    
+  }
+
+  #technology {
+    margin-left: 20.5rem;
+  }
+
+  .text-box {
+    font-family: "Open Sans";
+    font-weight: normal;
+    margin-left: 30px;
+    
+    h2 {
+      font-size: 2rem;
+      color: #abe1fa;
+      span {
+        color: #fff;
+        font-size: 1rem;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .t-inner {
+    @include pc-m {
+      width: 100%;
+    }
+    .text-box {
+     
+      img {
+        width: 100%;        
+      }
+    }
+    .photo {
+      position: absolute;
+      top: 30rem;
+      right: -3%;
+      z-index: 98;
+      @include pc-m {
+        display: none;
+      }
+      img {
+        width: 500px;
+        height: auto;
+      }
+    }
+  }
+
+  .g-inner {
+    margin: 300px 0 150px 0;
+    display: grid;
+    transition: all 0.4s;
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      transition: all 0.4s;      
+      
+    }
+    @include pc-m {
+      margin: 100px 0 150px 0;
+    }
+    .photo {
+      @include pc-m {
+        display: none;
+      }
+      img {
+        width: 500px;
+        height: auto;
+        margin-bottom: 50px;
+      }
+    }
+  }
+
+  .b-inner {
+    margin: 200px 0 150px 0;
+    display: grid;
+    .inner {
+      display: flex;
+      justify-content: space-between;
+    }
+    .photo {
+      @include pc-m {
+        display: none;
+      }
+      img {
+        width: 500px;
+        height: auto;
+        margin-bottom: 50px;
+      }
+    }
+  }
+}

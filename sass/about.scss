@@ -1,0 +1,385 @@
+@import "mixin.scss";
+
+.container {
+  position: absolute;
+  width: 1130px;
+  color: #fff;
+  margin: 0 auto;
+  top: 17%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  transition: all 0.4s;
+  @include pc-width {
+    top: 22%;
+  }
+  @include pc-m {
+    margin-top: 8rem;
+    width: 1000px;
+    left: 5%;
+  }
+
+  @include pc-s {
+    width: 100%;
+    //left: 0;
+  }
+
+  .container-one {
+    position: relative;
+    height: 700px;
+    //border: 1px solid red;
+
+    @include pc-m {
+      width: 650px;
+      margin: 0 auto;
+    }
+  }
+
+  #about {
+    margin-left: 60px;
+    transition: all 0.4s;
+    @include pc-m {
+      margin-left: 120px;
+    }
+  }
+
+  .text_box {
+    font-family: "Open Sans";
+    font-weight: normal;
+    h2 {
+      padding: 0;
+      margin: 0;
+      font-size: 2.5rem;
+      margin-bottom: 60px;
+    }
+
+    .text_years {
+      letter-spacing: 0.1rem;
+      padding-left: 10px;
+      margin-bottom: 80px;
+      font-size: 1.6rem;
+      line-height: 20px;
+      span {
+        color: #ec6061;
+        font-weight: 800;
+        font-size: 1.7rem;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 30px;
+      li {
+        letter-spacing: 0.1rem;
+        line-height: 40px;
+      }
+    }
+  }
+
+  .one {
+    position: absolute;
+    right: 3%;
+    top: 1%;
+    z-index: 99;
+    transition: all 0.4s;
+    @include pc-m {
+      right: 0;
+      top: 13%;
+    }
+    img {
+      width: 100%;
+      transition: all 0.4s;
+      @include pc-m {
+        display: none;
+      }
+    }
+  }
+
+  .name {
+    position: absolute;
+    right: -2%;
+    top: -8%;
+    z-index: 999;
+    @include pc-m {
+      display: none;
+    }
+  }
+
+  .container-two {
+    position: relative;
+    height: 250px;
+    @include pc-m {
+      width: 880px;
+    }
+    @include pc-s {
+      display: none;
+    }
+  }
+
+  .experience {
+    position: absolute;
+    z-index: 2;
+    top: 10%;
+    left: 0;
+    width: 100%;
+  }
+
+  .text_experience {
+    padding: 180px 0 0 80px;
+    font-family: "Open Sans";
+    letter-spacing: 0.1rem;
+    font-size: 1rem;
+    width: 100%;
+    @include pc-m {
+      width: 800px;
+    }
+    span {
+      color: #ec6061;
+      font-weight: 800;
+    }
+  }
+
+  .container-three {
+    position: relative;
+    display: grid;
+    margin-top: 150px;
+    height: 250px;
+    transition: all 0.4s;
+    @include pc-s {
+      margin-top: 10px;
+    }
+
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      font-family: "Open Sans";
+      letter-spacing: 0.1rem;
+      @include pc-m {
+        width: 1000px;
+      }
+      @include pc-s {
+        display: block;
+        width: 700px;
+        margin: 0 auto;
+      }
+      .e-one {
+        text-align: left;
+        width: 500px;
+        @include pc-s {
+          width: 600px;
+          padding-left: 5rem;
+        }
+        span {
+          font-weight: 800;
+          font-size: 1.54rem;
+        }
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 4rem;
+          font-weight: 800;
+        }
+        h3 {
+          margin: 15px 0 0 0;
+          padding: 0;
+          font-size: 1.5rem;
+          font-weight: 600;
+          font-family: "微軟正黑體";
+          color: #ec6061;
+        }
+        p {
+          font-family: "微軟正黑體";
+          font-size: 1.1rem;
+          line-height: 20px;
+        }
+
+        ol {
+          margin: 0;
+          padding: 0 0 0 25px;
+          font-family: "微軟正黑體";
+          li {
+            line-height: 35px;
+            color: #abe1fa;
+            font-size: 1rem;
+          }
+        }
+
+        p.mark {
+          color: #abe1fa;
+          font-size: 1rem;
+        }
+      }
+
+      .project {
+        @include pc-s {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .container-four {
+    position: relative;
+    display: grid;
+    margin-top: 500px;
+    height: 250px;
+    transition: all 0.4s;
+    @include pc-s {
+      margin-top: 350px;
+    }
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      font-family: "Open Sans";
+      letter-spacing: 0.1rem;
+      @include pc-m {
+        width: 1000px;
+      }
+      @include pc-s {
+        width: 100%;
+      }
+      .e-one {
+        text-align: left;
+        width: 550px;
+        @include pc-s {
+          width: 600px;
+          padding-left: 5rem;
+        }
+        span {
+          font-weight: 800;
+          font-size: 1.54rem;
+        }
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 4rem;
+          font-weight: 800;
+        }
+        h3 {
+          margin: 15px 0 0 0;
+          padding: 0;
+          font-size: 1.5rem;
+          font-weight: 600;
+          font-family: "微軟正黑體";
+          color: #ec6061;
+        }
+        p {
+          font-family: "微軟正黑體";
+          font-size: 1.1rem;
+          line-height: 20px;
+        }
+
+        ol {
+          margin: 0;
+          padding: 0 0 0 25px;
+          font-family: "微軟正黑體";
+          li {
+            line-height: 35px;
+            color: #abe1fa;
+            font-size: 1rem;
+          }
+        }
+
+        p.mark {
+          color: #abe1fa;
+          font-size: 1rem;
+        }
+      }
+
+      .project {
+        @include pc-s {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .container-five {
+    position: relative;
+    display: grid;
+    margin-top: 500px;
+    height: 250px;
+    transition: all 0.4s;
+    @include pc-s {
+      margin-top: 350px;
+    }
+    .inner {
+      display: flex;
+      justify-content: space-between;
+      font-family: "Open Sans";
+      letter-spacing: 0.1rem;
+      @include pc-m {
+        width: 1000px;
+      }
+      @include pc-s {
+        width: 100%;
+      }
+      .e-one {
+        text-align: left;
+        width: 500px;
+        @include pc-s {
+          width: 500px;
+          padding-left: 5rem;
+        }
+
+        span {
+          font-weight: 800;
+          font-size: 1.54rem;
+        }
+        h2 {
+          margin: 0;
+          padding: 0;
+          font-size: 4rem;
+          font-weight: 800;
+        }
+        h3 {
+          margin: 15px 0 0 0;
+          padding: 0;
+          font-size: 1.5rem;
+          font-weight: 600;
+          font-family: "微軟正黑體";
+          color: #ec6061;
+        }
+        p {
+          font-family: "微軟正黑體";
+          font-size: 1.1rem;
+          line-height: 20px;
+        }
+
+        ol {
+          margin: 0;
+          padding: 0 0 0 25px;
+          font-family: "微軟正黑體";
+          li {
+            line-height: 35px;
+            color: #abe1fa;
+            font-size: 1rem;
+          }
+        }
+
+        p.mark {
+          color: #abe1fa;
+          font-size: 1rem;
+        }
+      }
+      .project {
+        @include pc-s {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .container-six {
+    position: relative;
+    text-align: center;
+    margin: 450px 0 50px 0;
+    @include pc-m {
+      width: 1000px;    }
+
+    @include pc-s {
+     display: none;
+    }
+  }
+}

@@ -1,0 +1,149 @@
+@import "mixin.scss";
+@import "font.scss";
+
+
+
+@mixin social-icon {
+  @include space-between();
+  a {
+    color: #fff;
+    transform: scaleY(0.8);
+    transition: 0.35s ease-in-out;
+    border-radius: 50%;
+    transition: all 0.4s;
+    &:hover {
+      transform: scale(1.2, 0.9);
+      transition: all 0.4s;
+    }
+  }
+}
+
+@mixin space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin bottom-line {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s;
+}
+
+@mixin bottom-line-hover {
+  letter-spacing: 10px;
+  transform: translateX(20px);
+  &::before {
+    transform: scaleX(1);
+    transform-origin: left;
+    transition: transform 0.5s;
+  }
+}
+
+//======== menu popup =======
+
+.menu-popup-wrap {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(#0a0c0c, 1);
+  z-index: 2;
+  transition: all 0.4s;
+  z-index: 9998;
+}
+
+.current {
+  opacity: 0;
+  transition: all 0.4s;
+}
+
+.menu-popup {
+  display: none;
+}
+
+.popup-list {
+  opacity: 0;
+  position: absolute;
+  top: 15%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 1300px;
+  z-index: 3;
+  transition: all 0.4s;
+  color: #fff;
+  z-index: 9999;
+  //border: 1px solid yellow;
+  @include pc-m {
+    width:100%;
+  }
+  @include pc-s {
+    width:100%;
+  }
+  .menu-list {
+    width: 100%;
+    text-align: center;
+    ul {
+      li {
+        list-style: none;
+        a {
+          text-decoration: none;
+          position: relative;
+          cursor: pointer;
+          line-height: 140px;
+          color: #fff;
+          font-family: "NeueMontreal";
+          font-size: 4rem;
+          letter-spacing: 6px;
+          transition: all 0.4s;
+
+          &:before {
+            @include bottom-line();
+            bottom: 0;
+            left: 0;
+            width: 400px;
+            height: 5%;
+          }
+          &:hover {
+            color: #fff;
+            @include bottom-line-hover();
+          }
+        }
+      }
+    }
+  }
+}
+
+.menu-close {
+  display: none;
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  z-index: 4;
+  width: 40px;
+  transition: all 0.4s;
+  cursor: pointer;
+  z-index: 9999;
+  a {
+    color: #fff;
+    div {
+      height: 2px;
+      background-color: #fff;
+      margin: 12px 0;
+      transition: 0.4s;
+      &.line-left {
+        transform: rotate(-45deg) translate(-2px, 6px);
+      }
+      &.line-right {
+        transform: rotate(45deg) translate(-4px, -8px);
+      }
+    }
+  }
+  &:hover {
+    transform: rotate(360deg);
+  }
+}
