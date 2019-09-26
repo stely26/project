@@ -1,0 +1,67 @@
+/*把變數帶入mixin中，此mixin只就單純把media queries寫到我的mixin中，
+並且使用我上面設立的變數來調動media queries的width*/
+
+$pc-media:1366px;
+$pc-m: 1150px;
+$pc-s:800px;
+
+//電腦
+@mixin pc-width() {
+  @media all and (max-width: $pc-media) {
+    @content;
+  }
+}
+
+@mixin pc-m() {
+  @media all and (max-width: $pc-m) {
+    @content;
+  }
+}
+
+@mixin pc-s() {
+  @media all and (max-width: $pc-s) {
+    @content;
+  }
+}
+
+
+//平板
+@mixin pad-width() {
+  @media all and (min-width:$pad-media) and (max-width: $pcs-media) {
+    @content;
+  }
+}
+//小平板
+@mixin small-pad-width() {
+  @media all and (min-width: $phone-media) and (max-width:$pads-media) {
+    @content;
+  }
+}
+//手機
+@mixin phone-width() {
+  @media all and (max-width: $phones-media) {
+    @content;
+  }
+}
+
+//繼續延伸上面的media queries 的mixin code
+//padding responsive的mixin
+
+@mixin responsive-padding($pc,$pad,$small-pad,$phone) {
+  //電腦版
+  @include pc-width {
+    padding:$pc;
+  }
+  //平板
+  @include pad-width {
+    padding:$pad;
+  }
+  //小平板
+  @include small-pad-width {
+    padding:$small-pad;
+  }
+  //手機
+  @include small-pad-width {
+    padding:$phone;
+  }
+}
